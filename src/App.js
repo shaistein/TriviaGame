@@ -8,16 +8,18 @@ function App() {
   const [questions, setQuestions] = useState([])
   const [questionNumber, setQuestionNumber] = useState();
   const [score, setScore] = useState(0);
-  const [showScorePage, SetShowScorePage] = useState(false);
+  const [showScorePage, setShowScorePage] = useState(false);
   const [nextQuestion, setNextQuestion] = useState();
   const [newQestionsneeded, setNewQestionsneeded] = useState(true);
 	
 	const handleAnswerClick = (isCorrect) => {
 		if (isCorrect) setScore(score + 10);
-		setTimeout(() => setQuestionNumber(questionNumber => questionNumber + 1), 1000);
-		if (questionNumber+1 > 9) {
-			SetShowScorePage(true);
-		}
+		setTimeout(() => {
+	    	setQuestionNumber(questionNumber => questionNumber + 1)
+			if (questionNumber + 1 > 9) {
+				setShowScorePage(true);
+			}
+		}, 1000); 
 	}
 
 	useEffect(() => {
@@ -37,7 +39,7 @@ function App() {
 
 	const handleReplayClick = () => {
 		setQuestionNumber(0);
-		SetShowScorePage(false);
+		setShowScorePage(false);
 		setScore(0);
 		setNewQestionsneeded(true);
 	}
