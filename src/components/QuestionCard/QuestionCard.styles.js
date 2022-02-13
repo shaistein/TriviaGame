@@ -1,5 +1,5 @@
-import colors from '../../utils/colors';
-import styled from 'styled-components';
+import colors from "../../utils/colors";
+import styled from "styled-components";
 
 export const QuestionContainer = styled.div`
   display: flex;
@@ -21,56 +21,54 @@ export const QuestionContainer = styled.div`
 `;
 
 export const Question = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 `;
 
 export const QuestionText = styled.h1`
-    margin-bottom: 12px;
-    font-size: 32px;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
+  margin-bottom: 12px;
+  font-size: 32px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
 `;
 
 export const QuestionCategory = styled.h3`
-    margin-bottom: 20px;
-    font-size: 26px;
+  margin-bottom: 20px;
+  font-size: 26px;
 `;
 
 export const AnswersContainer = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
 `;
 
 export const Score = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
 `;
 
-
 export const Answer = styled.button`
-    margin: 0 auto;
-    width: 70%;
-    font-size: 32px;
-    color: #ffffff;
-    line-height: 60px;
-    background-color: ${({background}) => background};
-    border-radius: 15px;
-    display: flex;
-    
-    align-items: center;
-    border: 5px solid ${colors.border};
-    cursor: pointer;
-    margin-bottom: 20px;
-    justify-content: center;
-    :hover {
-        transform: scale(1.025);
-        border: 2px solid 'green';
-    }
+  margin: 0 auto;
+  width: 70%;
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 60px;
+  background-color: ${({ background }) => background};
+  border-radius: 15px;
+  display: flex;
+
+  align-items: center;
+  border: 5px solid ${colors.border};
+  cursor: pointer;
+  margin-bottom: 20px;
+  justify-content: center;
+  :hover {
+    transform: scale(1.025);
+    border: 2px solid "green";
+  }
 `;

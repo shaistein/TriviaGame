@@ -1,5 +1,5 @@
-import colors from '../../utils/colors';
-import styled from 'styled-components';
+import colors from "../../utils/colors";
+import styled from "styled-components";
 
 export const ScoreContainer = styled.div`
   display: flex;
@@ -16,26 +16,26 @@ export const ScoreContainer = styled.div`
   align-items: center;
   font-size: 32px;
   margin: auto;
-  width: 800px; 
+  width: 800px;
   height: 700px;
   padding: 0px;
 `;
 
 export const Replay = styled.button`
-    width: 25%;
-    font-size: 25px;
-    color: #ffffff;
-    background-color: ${colors.answer};
-    border-radius: 15px;
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    border: 5px solid ${colors.border};
-    cursor: pointer;
-    margin-bottom: 20px;
-    justify-content: center;
-    :hover {
-      transform: scale(1.025);
-      border: 2px solid 'green';
+  width: 25%;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: ${colors.answer};
+  border-radius: 15px;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border: 5px solid ${colors.border};
+  cursor: pointer;
+  margin-bottom: 20px;
+  justify-content: center;
+  :hover {
+    transform: scale(1.025);
+    border: 2px solid "green";
   }
 `;
