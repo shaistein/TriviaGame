@@ -10,11 +10,11 @@ function App() {
   const [score, setScore] = useState(0);
   const [showScorePage, SetShowScorePage] = useState(false);
   const [nextQuestion, setNextQuestion] = useState();
+  const [newQestionsneeded, setNewQestionsneeded] = useState(true);
 	
 	const handleAnswerClick = (isCorrect) => {
 		if (isCorrect) setScore(score + 10);
-		setTimeout(() => setQuestionNumber(state => state+1), 1000);
-		console.log(questionNumber);
+		setTimeout(() => setQuestionNumber(questionNumber => questionNumber + 1), 1000);
 		if (questionNumber+1 > 9) {
 			SetShowScorePage(true);
 		}
@@ -25,11 +25,11 @@ function App() {
 			const request = await axios.get('https://opentdb.com/api.php?amount=10')
 			setQuestions(request.data.results)
 			setQuestionNumber(0);
-			console.log(request.data.results)
+			setNewQestionsneeded(false);
 			return request;
 	   	}
 		fetchData();
-	}, []);
+	}, [newQestionsneeded]);
 	
 	useEffect(() => {
 		setNextQuestion(questions[questionNumber]);
@@ -39,6 +39,7 @@ function App() {
 		setQuestionNumber(0);
 		SetShowScorePage(false);
 		setScore(0);
+		setNewQestionsneeded(true);
 	}
 
   return (
