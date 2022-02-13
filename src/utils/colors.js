@@ -1,5 +1,5 @@
 const colors = {
-    question: '#252d4a',
+    question: '#001f3f',
     answer: '#252d4a',
     border: '#234668',
     correctAnswer: '#29ad4e',

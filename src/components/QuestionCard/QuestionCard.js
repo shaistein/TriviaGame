@@ -16,13 +16,18 @@ const QuestionCard = (props) => {
 
   useEffect(() => {setSelectedAnswer(null)}, [questioncard]);
 
+  function htmlDecode(input) {
+    var doc = new DOMParser().parseFromString(input, "text/html");
+    return doc.documentElement.textContent;
+  }
+
   return (
     <QuestionContainer>
       <Question>
-        <QuestionCategory>The category is {category}</QuestionCategory> 
+        <QuestionCategory>The category is {htmlDecode(category)}</QuestionCategory> 
       </Question>
       <Question>
-        <QuestionText>{question}</QuestionText>
+        <QuestionText>{htmlDecode(question)}</QuestionText>
       </Question>
       <AnswersContainer>
         {shuffledAnsweres.map((answer, i) => {
@@ -35,7 +40,7 @@ const QuestionCard = (props) => {
           }
 
           return (
-            <Answer key={i} onClick={() => onAnswerClick(answer)} background={background} disabled={!!selectedAnswer}>{answer}</Answer>
+            <Answer key={i} onClick={() => onAnswerClick(answer)} background={background} disabled={!!selectedAnswer}>{htmlDecode(answer)}</Answer>
           );
 
         })}

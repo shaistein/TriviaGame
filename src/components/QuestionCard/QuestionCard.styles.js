@@ -4,10 +4,7 @@ import styled from 'styled-components';
 export const QuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
-  width: 100%;
+  height: 900px;
   background-color: ${colors.question};
   width: 700px;
   min-height: 200px;
@@ -17,6 +14,10 @@ export const QuestionContainer = styled.div`
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   color: #ffffff;
   align-items: center;
+  margin: auto;
+  width: 800px; /* (311 x 2) */
+  height: 700px;
+  padding: 0px;
 `;
 
 export const Question = styled.div`
@@ -24,11 +25,15 @@ export const Question = styled.div`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    
 `;
 
 export const QuestionText = styled.h1`
     margin-bottom: 12px;
     font-size: 32px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
 `;
 
 export const QuestionCategory = styled.h3`
@@ -48,18 +53,24 @@ export const Score = styled.div`
     flex: 1;
 `;
 
+
 export const Answer = styled.button`
-    width: 100%;
+    margin: 0 auto;
+    width: 70%;
     font-size: 32px;
     color: #ffffff;
+    line-height: 60px;
     background-color: ${({background}) => background};
     border-radius: 15px;
     display: flex;
-    padding: 10px;
-    justify-content: flex-start;
+    
     align-items: center;
     border: 5px solid ${colors.border};
     cursor: pointer;
     margin-bottom: 20px;
     justify-content: center;
+    :hover {
+        transform: scale(1.025);
+        border: 2px solid 'green';
+    }
 `;
